@@ -3,7 +3,7 @@
 
 
 // base path, that will be used to resolve files and exclude
-basePath = '';
+basePath = '../';
 
 
 // list of files / patterns to load in the browser
@@ -25,7 +25,7 @@ reporters = ['progress'];
 
 
 // web server port
-port = 8080;
+port = 8001;
 
 
 // cli runner port

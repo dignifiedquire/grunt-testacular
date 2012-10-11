@@ -1,0 +1,30 @@
+{
+  "name": "grunt-testacular",
+  "version": "0.1.0",
+  "description": "A grunt wrapper for running tests with testacular.",
+  "main": "grunt.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "~0.3.15",
+    "grunt-contrib-coffee": "~0.3.1",
+    "testacular": "~0.3.12",
+    "mocha": "~1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dignifiedquire/grunt-testacular.git"
+  },
+  "keywords": [
+    "gruntplugin",
+    "grunt",
+    "testacular"
+  ],
+  "author": "dignifiedquire",
+  "license": "MIT"
+}

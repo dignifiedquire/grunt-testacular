@@ -1,28 +1,38 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     coffee: {
-      compile: {
+      build: {
         options: {
           bare: true
         },
         files: {
-          'tasks/testacular.js': 'tasks/testacular.coffee'
+          'tasks/testacular.js': 'tasks/testacular.coffee',
+          'test/fixtures/*.js': 'test/fixtures/*.coffee'
         }
       }
     },
     watch: {
-      files: 'tasks/testacular.coffee',
+      files: ['tasks/testacular.coffee', 'test/fixtures/*.coffee'],
       tasks: 'default'
     },
-    testacular: {
+    testacularServer: {
       unit: {
         options: {
           configFile: 'test/testacular.conf.js'
         },
-        src: 'test/examples/*.coffee'
+        src:  'test/fixtures/unit_test.js'
       }
-    }
+    },
+    testacularRun: {
+      unit: {
+        options: {
+          configFile: 'test/testacular.conf.js'
+        },
+        src: 'test/fixtures/*.js'
+      }
+    }    
   });
+
 
   // Load local tasks.
   grunt.loadTasks('tasks');
@@ -31,7 +41,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   
   // Default task.
-  grunt.registerTask('default', 'coffee');
+  grunt.registerTask('default', 'coffee watch');
   
   
 }
