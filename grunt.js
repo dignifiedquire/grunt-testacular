@@ -17,18 +17,17 @@ module.exports = function(grunt) {
     },
     testacularServer: {
       unit: {
-        options: {
-          configFile: 'test/testacular.conf.js'
-        },
-        src:  'test/fixtures/unit_test.js'
+        configFile: 'test/testacular.conf.js',
+        files:  [
+          '#MOCHA',
+          '#MOCHA_ADAPTER',
+          'test/fixtures/unit_test.js'
+        ]
       }
     },
     testacularRun: {
       unit: {
-        options: {
-          configFile: 'test/testacular.conf.js'
-        },
-        src: 'test/fixtures/*.js'
+        configFile: 'test/testacular.conf.js'
       }
     }    
   });
