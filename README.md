@@ -1,7 +1,9 @@
 grunt-testacular
 ================
 
-A wrapper for [grunt](http://gruntjs.com) around [testacular](http://vojtajina.github.com/testacular/) that lets you run multiple instances of testacular.
+A wrapper for [grunt](http://gruntjs.com) around
+[testacular](http://vojtajina.github.com/testacular/) that lets you
+run multiple instances of testacular. 
 
 ## Installation
 
@@ -12,27 +14,55 @@ $ npm install grunt-testacular
 ```
 
 then load the tasks in your Gruntfile with
+
 ```javascript
 grunt.loadNpmTasks('grunt-testacular');
 ```
 
 ## Usage
+There are two tasks provided `testacular` and `testacularRun`. 
 
-In your Gruntfile add the following to `grunt.initConfig`
+### `testacular`
+This task is the equivalent of `testacular start <options>
+<configFile>`. You can use it to do single runs or to `autoWatch`
+files and directories. To use it you need to at least specify a
+`configFile`. All other options can be defined in the `configFile` but
+you can also override some of these.
+
+**simple example**
 
 ```javascript
 testacular: {
   unit: {
-    options: {
-      configFile: 'test/testacular-unit.conf.js'
-    },
-    src: 'test/examples/*.coffee'
-  },
-  e2e: {
-    options: {
-      configFile: 'test/testacular-e2e.conf.js'
-    },
-    src: 'test/examples/*.coffee'
+    configFile: 'config/testacular.conf.js'
+  }
+}
+```
+
+**advanced example**
+
+```javascript
+testacular: {
+  unit: {
+    configFile: 'config/testacular.conf.js',
+    files: [ '#MOCHA', '#MOCHA_ADAPTER', 'test/unit/*.js' ],
+    autoWatch: true,
+    browsers: [ 'Chrome', 'PhantomJS' ],
+    reporters: [ 'dots' ],
+    portRunner: 9101
+  }
+}
+```
+
+### `testacularRun`
+This task is the equivalent of running `testacular run <options>`.
+There is only one option available, that is `portRunner` that defines
+the port where the server is listening.
+
+```javascript
+testacularRun: {
+  unit: {
+    portRunner: 9101
   }
 }
 ```
