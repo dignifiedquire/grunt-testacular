@@ -7,8 +7,8 @@
     "test": "test"
   },
   "dependencies": {
-    "grunt": "~0.3.15",
-    "testacular": "https://github.com/dignifiedquire/testacular/tarball/feature-cli-adapters"
+    "grunt": "~0.3.17",
+    "testacular": ">=0.4.0"
   },
   "devDependencies": {
     "mocha": "~1.5.0",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dignifiedquire/grunt-testacular.git"
+    "url": "git@github.com:Dignifiedquire/grunt-testacular.git"
   },
   "keywords": [
     "gruntplugin",
@@ -33,7 +33,6 @@
   "bugs": {
     "url": "https://github.com/dignifiedquire/grunt-testacular/issues"
   },
-
   "author": "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
   "license": "MIT"
 }
