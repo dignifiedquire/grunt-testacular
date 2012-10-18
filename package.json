@@ -7,10 +7,10 @@
     "test": "test"
   },
   "dependencies": {
-    "grunt": "~0.3.17",
     "testacular": ">=0.4.0"
   },
   "devDependencies": {
+    "grunt": "~0.3.17",
     "mocha": "~1.5.0",
     "grunt-contrib-coffee": "~0.3.1"
   },

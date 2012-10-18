@@ -6,10 +6,11 @@ module.exports = function(grunt) {
   return grunt.registerMultiTask('testacularRun', 'Run tests on a testacular server. ', function() {
     var done;
     done = this.async();
-    grunt.log.ok(JSON.stringify(this.data));
     return runner.run(this.data, function(exitCode) {
       if (exitCode > 1) {
         return done(false);
+      } else {
+        return done();
       }
     });
   });
