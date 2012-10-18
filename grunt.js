@@ -6,28 +6,22 @@ module.exports = function(grunt) {
           bare: true
         },
         files: {
-          'tasks/testacular.js': 'tasks/testacular.coffee',
-          'test/fixtures/*.js': 'test/fixtures/*.coffee'
+          'tasks/*.js': 'tasks/*.coffee'
         }
       }
     },
     watch: {
-      files: ['tasks/testacular.coffee', 'test/fixtures/*.coffee'],
+      files: ['tasks/*.coffee'],
       tasks: 'default'
     },
     testacularServer: {
       unit: {
-        configFile: 'test/testacular.conf.js',
-        files:  [
-          '#MOCHA',
-          '#MOCHA_ADAPTER',
-          'test/fixtures/unit_test.js'
-        ]
+        configFile: 'test/testacular.conf.js'
       }
     },
     testacularRun: {
       unit: {
-        configFile: 'test/testacular.conf.js'
+        runnerPort: 9101
       }
     }    
   });
