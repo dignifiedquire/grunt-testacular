@@ -45,11 +45,10 @@ testacular: {
 testacular: {
   unit: {
     configFile: 'config/testacular.conf.js',
-    files: [ '#MOCHA', '#MOCHA_ADAPTER', 'test/unit/*.js' ],
     autoWatch: true,
     browsers: [ 'Chrome', 'PhantomJS' ],
     reporters: [ 'dots' ],
-    portRunner: 9101
+    runnerPort: 9101
   }
 }
 ```
@@ -62,14 +61,14 @@ the port where the server is listening.
 ```javascript
 testacularRun: {
   unit: {
-    portRunner: 9101
+    runnerPort: 9101
   }
 }
 ```
 
 ## Release History
 
-v0.1.0 - Get this stuff on `npm`.
+v0.1.0 - First release on npm.
 
 ## License
 Copyright (c) 2012 Friedel Ziegelmayer
