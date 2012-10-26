@@ -5,6 +5,12 @@ A wrapper for [grunt](http://gruntjs.com) around
 [testacular](http://vojtajina.github.com/testacular/) that lets you
 run multiple instances of testacular. 
 
+
+> **Breaking Changes in v0.2.0**
+> The task `testacularServer` will no longer keep running. If you want to keep it alive
+> on its own set the option `keepalive: true`!
+
+
 ## Installation
 
 First you need to install this plugin in your project
@@ -18,6 +24,11 @@ then load the tasks in your Gruntfile with
 ```javascript
 grunt.loadNpmTasks('grunt-testacular');
 ```
+And now you can run
+```bash
+$ grunt testacularServer
+```
+to start up the server.
 
 ## Usage
 There are two tasks provided `testacularServer` and `testacularRun`. 
@@ -52,6 +63,17 @@ testacular: {
   }
 }
 ```
+And if you want to keep the server running.
+```javascript
+testacularServer: {
+  unit: {
+    options: {
+      keepalive: true
+    },
+    configFile: 'config/testacular.conf.js'
+  }
+}
+```
 
 ### `testacularRun`
 This task is the equivalent of running `testacular run <options>`.
@@ -68,6 +90,7 @@ testacularRun: {
 
 ## Release History
 
+v0.2.0 - Added `keepalive` option.
 v0.1.0 - First release on npm.
 
 ## License

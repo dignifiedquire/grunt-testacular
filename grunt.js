@@ -16,6 +16,12 @@ module.exports = function(grunt) {
     },
     testacularServer: {
       unit: {
+        configFile: 'test/testacular.conf.js',
+        options: {
+          keepalive: true
+        }
+      },
+      sync: {
         configFile: 'test/testacular.conf.js'
       }
     },
@@ -33,6 +39,8 @@ module.exports = function(grunt) {
   // Load dependencies
   grunt.loadNpmTasks('grunt-contrib-coffee');
   
+  // sync task
+  grunt.registerTask('sync', 'testacularServer:sync watch')
   // Default task.
   grunt.registerTask('default', 'coffee watch');
   

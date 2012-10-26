@@ -11,13 +11,16 @@ module.exports = (grunt) ->
   
   grunt.registerMultiTask 'testacularServer', 'Starts up a testacular server.', ->
     done = @async()
-
+    
+    # default values
+    @data.options ?= {}
+    @data.options.keepalive ?= false
+      
     # start the server
     server.start @data, (exitCode) ->
       done(false) if exitCode > 0
-  
-
-
     
-  
-  
+    
+    # unless the keepalive option is set we are finished
+    done() unless @data.options.keepalive
+
