@@ -90,8 +90,8 @@ testacularRun: {
 
 ## Release History
 
-v0.2.0 - Added `keepalive` option.
-v0.1.0 - First release on npm.
+* v0.2.0 - Added `keepalive` option.
+* v0.1.0 - First release on npm.
 
 ## License
 Copyright (c) 2012 Friedel Ziegelmayer
