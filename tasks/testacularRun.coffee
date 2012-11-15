@@ -7,7 +7,6 @@
 #
 module.exports = (grunt) ->
   runner = require('testacular').runner
-  _ = grunt.utils._
   
   grunt.registerMultiTask 'testacularRun', 'Run tests on a testacular server. ', ->
     done = @async()

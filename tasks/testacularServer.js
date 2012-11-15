@@ -1,8 +1,7 @@
 
 module.exports = function(grunt) {
-  var server, _;
+  var server;
   server = require('testacular').server;
-  _ = grunt.utils._;
   return grunt.registerMultiTask('testacularServer', 'Starts up a testacular server.', function() {
     var done, _base, _base1, _ref, _ref1;
     done = this.async();
