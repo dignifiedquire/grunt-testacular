@@ -1,6 +1,6 @@
 {
   "name": "grunt-testacular",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A grunt wrapper for running tests with testacular.",
   "main": "grunt.js",
   "directories": {
