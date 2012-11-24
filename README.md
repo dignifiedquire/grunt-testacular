@@ -6,10 +6,8 @@ A wrapper for [grunt](http://gruntjs.com) around
 run multiple instances of testacular. 
 
 
-> **Breaking Changes in v0.2.0**
-> The task `testacularServer` will no longer keep running. If you want to keep it alive
-> on its own set the option `keepalive: true`!
-
+> For use with the latest testacular checkout `grunt-testacular@canary`.
+> This will use version `0.5.5` of testacular.
 
 ## Installation
 
@@ -89,8 +87,8 @@ testacularRun: {
 ```
 
 ## Release History
-
-* v0.2.2 - Add ability to use grunt templates
+* v0.3.0 - Use testacular@0.5.5 canary.
+* v0.2.2 - Add ability to use grunt templates.
 * v0.2.1 - Make Grunt 0.4.0a compatible.
 * v0.2.0 - Added `keepalive` option.
 * v0.1.0 - First release on npm.
