@@ -34,5 +34,8 @@
     "url": "https://github.com/dignifiedquire/grunt-testacular/issues"
   },
   "author": "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "contributors": [
+    "ca77y <ca77y@live.com>"
+  ]
 }
