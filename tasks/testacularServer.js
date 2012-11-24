@@ -11,6 +11,9 @@ module.exports = function(grunt) {
     if ((_ref1 = (_base1 = this.data.options).keepalive) == null) {
       _base1.keepalive = false;
     }
+    if (this.data.configFile) {
+      this.data.configFile = grunt.template.process(this.data.configFile);
+    }
     server.start(this.data, function(exitCode) {
       if (exitCode > 0) {
         return done(false);

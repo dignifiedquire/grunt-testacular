@@ -14,6 +14,7 @@ module.exports = (grunt) ->
     # default values
     @data.options ?= {}
     @data.options.keepalive ?= false
+    @data.configFile = grunt.template.process @data.configFile if @data.configFile
       
     # start the server
     server.start @data, (exitCode) ->
