@@ -18,7 +18,7 @@ module.exports = (grunt) ->
       
     # start the server
     server.start @data, (exitCode) ->
-      done(false) if exitCode > 0
+      done(exitCode == 0)
     
     
     # unless the keepalive option is set we are finished
