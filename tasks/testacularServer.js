@@ -1,4 +1,3 @@
-
 module.exports = function(grunt) {
   var server;
   server = require('testacular').server;
@@ -15,9 +14,7 @@ module.exports = function(grunt) {
       this.data.configFile = grunt.template.process(this.data.configFile);
     }
     server.start(this.data, function(exitCode) {
-      if (exitCode > 0) {
-        return done(false);
-      }
+      return done(exitCode === 0);
     });
     if (!this.data.options.keepalive) {
       return done();

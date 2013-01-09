@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "testacular": ">=0.4.0"
+    "testacular": ">=0.5.7"
   },
   "devDependencies": {
     "grunt": "~0.3.17",
