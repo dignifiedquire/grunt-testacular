@@ -1,22 +1,31 @@
 {
   "name": "grunt-testacular",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A grunt wrapper for running tests with testacular.",
-  "main": "grunt.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "testacular": ">=0.4.0"
-  },
-  "devDependencies": {
-    "grunt": "~0.3.17",
-    "mocha": "~1.5.0",
-    "grunt-contrib-coffee": "~0.3.1"
+  "author": {
+    "name": "Friedel Ziegelmayer",
+    "email": "dignifiedquire@gmail.com"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:Dignifiedquire/grunt-testacular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dignifiedquire/grunt-testacular/issues"
+  },
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "testacular": "~0.5.10"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.1.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
   },
   "keywords": [
     "gruntplugin",
@@ -30,11 +39,12 @@
     "remote",
     "execution"
   ],
-  "bugs": {
-    "url": "https://github.com/dignifiedquire/grunt-testacular/issues"
-  },
-  "author": "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Dignifiedquire/grunt-testacular/blob/master/LICENSE-MIT"
+    }
+  ],
   "contributors": [
     "ca77y <ca77y@live.com>"
   ]

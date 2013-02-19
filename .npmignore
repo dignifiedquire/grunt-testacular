@@ -1,1 +1,4 @@
-tasks/*.coffee
+.npmignore
+.jshintrc
+test
+.gitattributes

@@ -1,13 +1,10 @@
-grunt-testacular
-================
+# grunt-testacular
 
 A wrapper for [grunt](http://gruntjs.com) around
-[testacular](http://vojtajina.github.com/testacular/) that lets you
+[testacular](http://vojtajina.github.com/testacular/) that lets you 
 run multiple instances of testacular. 
 
-
-> For use with the latest testacular checkout `grunt-testacular@canary`.
-> This will use version `0.5.5` of testacular.
+> As of v 0.3.0 `testacularServer` is now called `testacular`.
 
 ## Installation
 
@@ -24,12 +21,12 @@ grunt.loadNpmTasks('grunt-testacular');
 ```
 And now you can run
 ```bash
-$ grunt testacularServer
+$ grunt testacular
 ```
 to start up the server.
 
 ## Usage
-There are two tasks provided `testacularServer` and `testacularRun`. 
+There are two tasks provided `testacular` and `testacularRun`. 
 
 ### `testacularServer`
 This task is the equivalent of `testacular start <options>
@@ -41,9 +38,11 @@ you can also override some of these.
 **simple example**
 
 ```javascript
-testacularServer: {
+testacular: {
   unit: {
-    configFile: 'config/testacular.conf.js'
+    options: {
+      configFile: 'config/testacular.conf.js'
+    }
   }
 }
 ```
@@ -53,47 +52,47 @@ testacularServer: {
 ```javascript
 testacular: {
   unit: {
-    configFile: 'config/testacular.conf.js',
-    autoWatch: true,
-    browsers: [ 'Chrome', 'PhantomJS' ],
-    reporters: [ 'dots' ],
-    runnerPort: 9101
+    options: {
+      configFile: 'config/testacular.conf.js',
+      autoWatch: true,
+      browsers: [ 'Chrome', 'PhantomJS' ],
+      reporters: [ 'dots' ],
+      runnerPort: 9101
+    }
   }
 }
 ```
 And if you want to keep the server running.
 ```javascript
-testacularServer: {
+testacular: {
   unit: {
     options: {
+      configFile: 'config/testacular.conf.js',
       keepalive: true
-    },
-    configFile: 'config/testacular.conf.js'
+    }
   }
 }
 ```
 
 ### `testacularRun`
 This task is the equivalent of running `testacular run <options>`.
-There is only one option available, that is `portRunner` that defines
+There is only one option available, that is `runnerPort` that defines
 the port where the server is listening.
 
 ```javascript
 testacularRun: {
   unit: {
-    runnerPort: 9101
+    options: {
+      runnerPort: 9101
+    }
   }
 }
 ```
 
 ## Release History
-* v0.3.0 - Use testacular@0.5.5 canary.
+* v0.3.0 - Complete Rewrite
 * v0.2.2 - Add ability to use grunt templates.
 * v0.2.1 - Make Grunt 0.4.0a compatible.
 * v0.2.0 - Added `keepalive` option.
 * v0.1.0 - First release on npm.
 
-## License
-Copyright (c) 2012 Friedel Ziegelmayer
-
-Licensed under the MIT license.
