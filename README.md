@@ -1,4 +1,4 @@
-# grunt-testacular
+# grunt-testacular [![Build Status](https://travis-ci.org/vojtajina/testacular.png)](https://travis-ci.org/vojtajina/testacular)
 
 A wrapper for [grunt](http://gruntjs.com) around
 [testacular](http://vojtajina.github.com/testacular/) that lets you 
