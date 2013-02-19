@@ -23,6 +23,8 @@ module.exports = function(grunt) {
       async: {
         options: {
           configFile: 'test/testacular.conf.js',
+          autoWatch: false,
+          singleRun: true,
           keepalive: true
         }
       },
@@ -47,4 +49,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('default', 'jshint');
+  grunt.registerTask('test', 'testacular:async');
 };
