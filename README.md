@@ -28,12 +28,10 @@ to start up the server.
 ## Usage
 There are two tasks provided `testacular` and `testacularRun`. 
 
-### `testacularServer`
+### `testacular`
 This task is the equivalent of `testacular start <options>
 <configFile>`. You can use it to do single runs or to `autoWatch`
-files and directories. To use it you need to at least specify a
-`configFile`. All other options can be defined in the `configFile` but
-you can also override some of these.
+files and directories.
 
 **simple example**
 
